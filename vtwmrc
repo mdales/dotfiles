@@ -1,0 +1,447 @@
+#
+# $Id: vtwmrc,v 1.13 2000/07/09 15:48:56 neugebar Exp $
+#
+
+
+###############################################################################
+# General settings
+###############################################################################
+
+NoGrabServer
+
+IntelligentPlacement
+NotVirtualGeometries
+FixTransientVirtualGeometries
+FixManagedVirtualGeometries
+
+XorValue	90
+#OpaqueResize
+#OpaqueMove
+
+
+Zoom  20
+
+RandomPlacement
+
+WarpCursor
+
+BorderWidth	2
+FramePadding 	1
+
+MenuFont        "6x10"
+TitleFont       "6x10"
+
+DecorateTransients
+DontSqueezeTitle
+DontMoveOff
+
+
+#Doors {"xclock" "90x90+10+90" "90x90+1610+90"}
+
+LeftTitleButton			":xpm:menu" = f.delete
+
+###############################################################################
+# Colour
+###############################################################################
+Color
+{
+    DefaultBackground		"black"
+    DefaultForeground		"white"
+
+    MenuForeground 		"white"
+    MenuBackground 		"CadetBlue"
+
+    MenuTitleForeground 	"white"
+    MenuTitleBackground 	"CornFlowerBlue"
+    MenuShadowColor 		"black"
+
+    DesktopDisplayBackground	"grey50"
+    DesktopDisplayForeground	"white"
+
+    VirtualBackground		"black"
+    VirtualForeground		"white"
+
+    RealScreenForeground	"red"
+    RealScreenBackground	"red"
+
+    BorderColor 		"grey"
+    BorderTileForeground 	"grey"
+    BorderTileBackground 	"grey"
+
+    IconForeground		"white"
+    IconBackground		"cadetblue"
+    IconBorderColor		"green"
+
+    IconManagerForeground 	"black"
+    IconManagerBackground 	"maroon"
+
+    IconManagerBackground "LightSeaGreen" {
+	"emacs"			"SeaGreen"
+	"FRNoTitle"		"SeaGreen"
+	"exmh"			"SeaGreen"
+	"Navigator"             "ForestGreen"
+        "Netscape"              "ForestGreen"
+	"xterm-alpha_osf1"	"DeepSkyBlue"
+	"xterm-alpha_linux"	"RoyalBlue"
+	"xterm-ix86_linux"	"LightSeaGreen"
+	"xterm-sun4_sunos"	"peru"
+	"xterm-ix86_sunos"	"tan"
+	"xterm-arm32_netbsd"	"Gold"
+	"xterm-sun4_sli"        "PaleGreen"
+	"xterm-cl_cam"		"LightSalmon2"
+	"xterm-ix86_netbsd"	"MediumPurple1"
+        }
+    TitleBackground "LightSeaGreen" {
+	"emacs"			"SeaGreen"
+	"exmh"			"SeaGreen"
+	"Navigator"             "ForestGreen"
+        "Netscape"              "ForestGreen"
+	"xterm-alpha_osf1"	"DeepSkyBlue"
+	"xterm-alpha_linux"	"RoyalBlue"
+	"xterm-alpha_freebsd"	"DodgerBlue"
+	"xterm-ix86_linux"	"LightSeaGreen"
+	"xterm-sun4_sunos"	"peru"	
+	"xterm-ix86_sunos"	"tan"
+	"xterm-arm32_netbsd"	"Gold"
+	"xterm-cl_cam"		"LightSalmon2"
+	"xterm-ix86_netbsd"	"MediumPurple1"
+	"xterm-ix86_freebsd"    "MediumPurple2"
+	}
+}
+
+Monochrome
+{
+    BorderColor "white"
+    BorderTileForeground "black"
+    BorderTileBackground "white"
+    TitleForeground "black"
+    TitleBackground "white"
+}
+
+###############################################################################
+# Decoration
+###############################################################################
+
+NoTitle
+{
+  "Virtual Desktop"
+  "VTWM Desktop"
+  "VTWM Icon Manager"
+  "TWM"
+
+  "XTerm Icon Manager"
+
+  "users"
+  "xload"
+  "XLoad"
+  "xclock"
+  "xbiff"
+  "xman"
+  "topbox"
+  "xgframe"
+  "xpostit"
+  "glbiff"
+  "xbattery"
+  "XPlaycd"
+
+  "Minibuffer"
+  "FRNoTitle"
+  "GQmpeg -*"
+
+  "jukebox"
+  "Timer"
+
+  "panel"
+}
+
+
+DontShowInDisplay
+{
+  "VTWM Desktop"
+  "VTWM Door"
+}
+
+
+
+###############################################################################
+# IconManager
+###############################################################################
+IconManagerFont "5x8"
+#IconManagers
+#{
+#   "XTerm" "90x90-1+368"  1
+#}
+
+IconDirectory	"/usr/include/X11/bitmaps/"
+
+IconifyByUnMapping
+DontIconifyByUnMapping
+{
+    "xcalc"
+    "xbiff"
+    "xclock"
+    "xload"
+    "Virtual Desktop"
+}
+
+
+IconManagerDontShow
+{
+    "xclock"
+    "oclock"
+    "XLoad"
+    "xbiff"
+    "qbiff"
+    "gunkbiff"
+    "abbiff"
+    "xeyes"
+    "xmcd"
+    "topBox"
+    "Minibuffer"
+    "minibuffer"
+    "Virtual Desktop"
+    "xpostit"
+    "PostItNote"
+    "panel"
+}
+
+
+###############################################################################
+# Virtual desktop things
+###############################################################################
+
+VirtualDesktop 		"90x90-0+184" 60
+
+VirtualReceivesMotionEvents
+VirtualSendsMotionEvents
+
+NailedDown {
+        "Virtual Desktop"
+        "VTWM Desktop"
+        "TWM Icon Manager"
+
+	"XTerm Icon Manager"
+
+        "xbiff"
+	"glbiff"
+        "xpostit"
+        "PostItNote"
+        "xclock"
+        "xbattery"
+        "hexcalc"
+        "xcalc"
+	"xload"
+	"xgframe"
+	"xalert"
+	"users"
+	"GQmpeg - *"
+	"XPlaycd"
+	"X-Chat *"
+}
+
+SnapRealScreen
+PanDistanceX 100
+PanDistanceY 100
+
+Function "panup"    		{ f.panup     "100" f.snap }
+Function "pandown"  		{ f.pandown   "100" f.snap }
+Function "panleft"  		{ f.panleft   "100" f.snap }
+Function "panright" 		{ f.panright  "100" f.snap }
+
+Function "move-or-raise"	{ f.move   f.deltastop f.raise }
+Function "resize-or-raise"	{ f.resize f.deltastop f.raise }
+
+#
+# Nobody uses numeric keypads anyway!  This lets you select desktops
+#
+"KP_7" = :all: f.setrealscreen "+0+0"
+"KP_8" = :all: f.setrealscreen "+1280+0"
+"KP_9" = :all: f.setrealscreen "+2560+0"
+"KP_4" = :all: f.setrealscreen "+0+1024"
+"KP_5" = :all: f.setrealscreen "+1280+1024"
+"KP_6" = :all: f.setrealscreen "+2560+1024"
+"KP_1" = :all: f.setrealscreen "+0+2048"
+"KP_2" = :all: f.setrealscreen "+1280+2048"
+"KP_3" = :all: f.setrealscreen "+2560+2048"
+
+
+#Virtual Desktop
+
+# Virtual Desktop
+"Up"	=	:virtual:	f.function "panup"
+"Down"	=	:virtual:	f.function "pandown"
+"Left"	= 	:virtual:	f.function "panleft"
+"Right"	=	:virtual:	f.function "panright"
+Button1 =       :virtual:       f.movescreen
+
+#anywhere pan
+"Up"    = c     :all:           f.function "panup"
+"Down"  = c     :all:           f.function "pandown"
+"Left"  = c     :all:           f.function "panleft"
+"Right" = c     :all:           f.function "panright"
+
+# Window switching
+"Tab"   = m     :all:           f.warpring "next"
+"Tab"   = m|s   :all:           f.warpring "prev"
+
+"F4" = m : window : f.delete
+"F3" = m : window : f.horizoom
+"F2" = m : window : f.fullzoom
+"F1" = m : window : f.zoom
+
+
+#Button = KEYS : CONTEXT : FUNCTION
+#----------------------------------
+
+Button1 =      : root   : f.menu "button1"
+Button2 =      : root   : f.menu "TwmWindows"
+Button3 =      : root   : f.menu "button3"
+
+Button1 =      : title  : f.function "move-or-raise"
+Button2 =      : title  : f.function "resize-or-raise"
+Button3 =      : title  : f.lower
+
+# vtwm5.0 or more seems to want 'frame' rather than 'title'!
+Button2 =  m   : frame  : f.zoom
+Button3 =  m   : frame  : f.fullzoom
+
+Button1 =      : iconmgr   : f.deiconify
+Button2 =      : iconmgr   : f.deiconify
+Button3 =      : iconmgr   : f.destroy
+
+Button1 =      : icon   : f.move
+Button2 =      : icon   : f.deiconify
+Button3 =      : icon   : f.destroy
+
+Button1 =  m   : icon   : f.move
+Button2 =  m   : icon   : f.deiconify
+Button3 =  m   : icon   : f.destroy
+
+Button1 =  m   : window  : f.move
+Button2 =  m   : window  : f.resize
+Button3 =  m   : window  : f.destroy
+
+# Cancel is the Stop key on HP keyboards
+"Cancel" =      : all     : f.nail
+"Clear"  =      : all     : f.refresh
+
+
+menu "button3"
+{
+	"X things"		f.title
+	"Delete Window"		f.delete
+	"Show Icon Mgr"		f.showiconmgr
+	"Hide Icon Mgr"		f.hideiconmgr
+	"Move Window"		f.move
+	"ForceMove Window"	f.forcemove
+	"Resize Window"		f.resize
+	"Nail"			f.nail
+	"Source .vtwmrc"	f.twmrc
+	"Destroy Window"	f.destroy
+	"Basic Info"		f.identify
+	"Kill twm"		f.quit
+	"Refresh"		f.refresh
+	"Refresh Window"	f.winrefresh
+	"twm Version"		f.version
+	"Cut File"		f.cutfile
+	"Iconify"		f.iconify
+	"DeIconify"		f.deiconify
+	"Raise Window"		f.raise
+	"Lower Window"		f.lower
+	"Raise or Lower"	f.raiselower
+	"Identify"		f.identify
+}
+
+menu "button1"
+{
+	"*"		f.title
+        "xlock"		!"exec xscreensaver-command -lock"
+	"shell (small)"	!"xterm -name xterm-`resource $SHOST` -ls +ut -sl 300 -title \"$SHOST\" &"
+ 	"shell (half height)" !"xterm -name xterm-`resource $SHOST` -ls +ut -sl 300 -g 80x38 -title \"$SHOST\" &"
+	"shell (full height)"   !"xterm -name xterm-`resource $SHOST` -ls +ut -g 80x78 -sl 300 -title \"$SHOST\" &"
+        "shell grid"    !"~/library/scripts/shells.sh"
+	"Logins"	f.title
+	"dales"		!"xon dales -name xterm-ix86_linux -ssh &"
+	"groove"		!"xon dales -name xterm-ix86_linux -ssh &"
+	"pug"		!"xon pug -name xterm-ix86_linux -ssh &"
+	"gaspar"	!"xon gaspar -name xterm-ix86_linux -ssh &"
+	"blathazar"	!"xon balthazar -name xterm-ix86_linux -ssh &"
+	"melchoir"	!"xon melchoir -name xterm-ix86_linux -ssh &"
+#	"macauley"	!"xon macauley -name xterm-alpha_osf1 -ssh &"
+#	"bathurst"	!"xon bathurst -name xterm-alpha_osf1 -ssh &"
+#	"Logins More"	f.title
+#	"Linux ix86"	f.menu "linux"
+#	"Linux Alpha"   f.menu "linuxalpha"
+#	"Alpha OSF"	f.menu "alphas"
+#	"Solaris"	f.menu "solairs"
+#	"BSD"           f.menu "bsd"
+#        "Sli"           f.menu "sli"
+#	"Department"	f.menu "servers"
+	"Misc"		f.title
+	"* EXIT *"	f.quit
+}
+
+menu "linux"
+{
+	"attu"		!"xon attu -name xterm-ix86_linux -ssh &"
+	"aur"		!"xon aur -name xterm-ix86_linux -ssh &"
+	"easter"	!"xon easter -name xterm-ix86_linux -ssh &"
+	"eynhallow"     !"xon eynhallow -name xterm-ix86_linux -ssh &"
+	"gibbs"		!"xon gibbs -name xterm-ix86_linux -ssh &"
+	"kettle"	!"xon kettle -name xterm-ix86_linux -ssh &"
+	"low"		!"xon low -name xterm-ix86_linux -ssh &"
+	"nauru"		!"xon nauru -name xterm-ix86_linux -ssh &"
+	"perhentian"	!"xon perhentian -name xterm-ix86_linux -ssh &"
+	"sibu"		!"xon sibu -name xterm-ix86_linux -ssh &"
+	"snow"		!"xon snow -name xterm-ix86_linux -ssh &"
+}
+
+menu "linuxalpha"
+{
+	"silhouette"	!"xon silhouette -name xterm-alpha_linux -ssh &"
+}
+
+menu "alphas"
+{
+	"alderney"	!"xon alderney -name xterm-alpha_osf1 -ssh &"
+	"avon"		!"xon avon -name xterm-alpha_osf1 -ssh &"
+	"bathurst"	!"xon bathurst -name xterm-alpha_osf1 -ssh &"
+	"guernsey"	!"xon guernsey -name xterm-alpha_osf1 -ssh &"
+	"jersey"	!"xon jersey -name xterm-alpha_osf1 -ssh &"
+	"karkar"	!"xon karkar -name xterm-alpha_osf1 -ssh &"
+	"macauley"	!"xon macauley -name xterm-alpha_osf1 -ssh &"
+	"tanna"		!"xon tanna -name xterm-alpha_osf1 -ssh &"
+}
+
+menu "solaris"
+{
+	"elba"		!"xon elba -name xterm-sun4_sunos -ssh &"
+	"livingston"	!"xon livingston -name xterm-sun4_sunos -ssh &"
+	"rootok"	!"xon rootok -name xterm-ix86_sunos -ssh &"
+	"yap"		!"xon yap -name xterm-sun4_sunos -ssh &"
+}
+
+menu "bsd"
+{
+	"aride"		!"xon aride -name xterm-arm32_netbsd &"
+	"denis"		!"xon denis -name xterm-arm32_netbsd &"
+	"therese"	!"xon therese -name xterm-alpha_freebsd -ssh &"
+}
+
+menu "sli"
+{
+	"slicker"        !"xon slicker -name xterm-sun4_sunos -ssh &"
+	"slimy"          !"xon slimy -name xterm-sun4_sunos -ssh &"
+        "slinger"        !"xon slinger -name xterm-sun4_sunos -ssh &"
+}
+
+menu "servers"
+{
+	"albatross"	!"xon albatross -name xterm-sun4_sunos -ssh &"
+	"crete"		!"xon crete -name xterm-sun4_sunos -ssh &"
+	"hawaii"	!"xon hawaii -name xterm-sun4_sunos -ssh &"
+	"jupiter"	!"xon jupiter -name xterm-sun4_sunos -ssh &"
+	"neptune"	!"xon neptune -name xterm-sun4_sunos -ssh &"
+	"vanuata"	!"xon vanuata -name xterm-sun4_sunos -ssh &"
+	"walrus"	!"xon walrus -name xterm-sun4_sunos -ssh &"
+}

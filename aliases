@@ -1,0 +1,15 @@
+alias ll='ls -laF'
+alias md=mkdir
+alias rd=rmdir
+alias go=pushd
+alias see='dirs -v'
+alias back=popd
+
+alias m='make'
+alias mg='make grow'
+alias mi='make install'
+alias mc='make clean'
+alias mf='make force'
+alias mb='make bibtex'
+
+

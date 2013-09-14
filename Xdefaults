@@ -1,0 +1,177 @@
+XClock*foreground: white
+XClock*background: black
+XClock*hands: white
+XClock*highlight: white
+
+
+!!!Knews.editCommand:  emacs +%i %s
+Dtsession*wmStartupCommand:	fvwm2
+
+!!! xterm
+
+XTerm*foreground:       White
+XTerm*background:       Black
+!!! DarkBlue
+XTerm*font:             7x13
+!9x15
+!fixed
+!6x12 !7x13
+XTerm*cursorColor:      Yellow
+XTerm*pointerColor:     Yellow
+XTerm*ScrollBar:                        on
+XTerm*saveLines:                        500
+XTerm*scrollBar:                        True
+XTerm*scrollKey:                        True
+
+xconsole*foreground: White
+xconsole*background: Black
+
+!!! emacs
+
+Emacs*ruletable.ruletableGroupname.attributeFont: -adobe-helvetica-bold-r-normal--*-160-75-75-*-*-iso8859-1
+Emacs*proofstate.proofstateGoal.attributeFont: -adobe-courier-bold-r-normal--*-140-75-75-*-*-iso8859-1
+
+
+Emacs.geometry:		80x64
+Emacs*foreground:	Black
+Emacs*background:	White
+Emacs*cursorColor:	Black
+Emacs*pointerColor:	Black
+Emacs*font:		7x13
+!8x13
+!7x13
+!9x15
+Emacs.bitmapIcon:	on
+
+! set the face colors...
+
+! ...for selections
+Emacs.region.attributeForeground:		Grey
+Emacs.region.attributeBackground:		DarkBlue
+Emacs.highlight.attributeForeground:		Black
+Emacs.highlight.attributeBackground:		Grey
+Emacs.secondary-selection.attributeForeground:	Grey
+Emacs.secondary-selection.attributeBackground:	Darkred
+
+
+
+
+
+
+!!! xdvi
+
+xdvi*geometry:		735x865
+xdvi*foreground:	Black
+xdvi*bakcground:	White
+
+!!! ghostview
+
+ghostview*geometry:	620x650
+ghostview*foreground:	Black
+ghostview*background:	White
+
+!!! TGif poster...
+Tgif.InitialPaperSize:  150cm x 100cm
+Tgif*MaxColors: 27
+Tgif*Color0:    black
+Tgif*Color1:    gray10
+Tgif*Color2:    gray20
+Tgif*Color3:    gray30
+Tgif*Color4:    gray40
+Tgif*Color5:    gray50
+Tgif*Color6:    gray60
+Tgif*Color7:    gray70
+Tgif*Color8:    gray80
+Tgif*Color9:    gray90
+Tgif*Color10:   white
+Tgif*Color11:   red
+Tgif*Color12:   orange
+Tgif*Color13:   yellow
+Tgif*Color14:   green
+Tgif*Color15:   blue
+Tgif*Color16:   blue4
+Tgif*Color17:   violet
+Tgif*Color18:   magenta
+Tgif*Color19:   cyan
+Tgif*Color20:   wheat
+Tgif*Color21:   wheat3
+Tgif*Color22:   wheat4
+Tgif*Color23:   pink
+Tgif*Color24:   palegreen
+Tgif*Color25:   skyblue
+Tgif*Color26:   CadetBlue
+Tgif*UseGrayScale:      true
+Tgif*NoTgifIcon:        true
+Tgif*GridSystem:        Metric
+Tgif*InitialGrid:       -1
+Tgif*InitialShowGrid:   True
+Tgif*GroupedTextEditable:       true
+Tgif*WhereToPrint:      EPS
+Tgif*MaxLineWidths:     16
+Tgif*LineWidth0:        1
+Tgif*LineWidth1:        2
+Tgif*LineWidth2:        3
+Tgif*LineWidth3:        4
+Tgif*LineWidth4:        5
+Tgif*LineWidth5:        6
+Tgif*LineWidth6:        7
+Tgif*LineWidth7:        8
+Tgif*LineWidth8:        9
+Tgif*LineWidth9:        10
+Tgif*LineWidth10:       11
+Tgif*LineWidth11:       12
+Tgif*LineWidth12:       13
+Tgif*LineWidth13:       14
+Tgif*LineWidth14:       15
+Tgif*LineWidth15:       16
+Tgif*ArrowWidth0:       8
+Tgif*ArrowWidth1:       10
+Tgif*ArrowWidth2:       12
+Tgif*ArrowWidth3:       14
+Tgif*ArrowWidth4:       18
+Tgif*ArrowWidth5:       20
+Tgif*ArrowWidth6:       22
+Tgif*ArrowWidth7:       24
+Tgif*ArrowWidth8:       26
+Tgif*ArrowWidth9:       28
+Tgif*ArrowWidth10:      30
+Tgif*ArrowWidth11:      32
+Tgif*ArrowWidth12:      34
+Tgif*ArrowWidth13:      36
+Tgif*ArrowWidth14:      40
+Tgif*ArrowWidth15:      42
+
+Tgif*ArrowHeight0:      3
+Tgif*ArrowHeight1:      4
+Tgif*ArrowHeight2:      5
+Tgif*ArrowHeight3:      6
+Tgif*ArrowHeight4:      7
+Tgif*ArrowHeight5:      8
+Tgif*ArrowHeight6:      9
+Tgif*ArrowHeight7:      10
+Tgif*ArrowHeight8:      11
+Tgif*ArrowHeight9:      12
+Tgif*ArrowHeight10:     13
+Tgif*ArrowHeight11:     14
+Tgif*ArrowHeight12:     15
+Tgif*ArrowHeight13:     16
+Tgif*ArrowHeight14:     17
+Tgif*ArrowHeight15:     18
+
+Tgif*InitialFont:       Helvetica
+Tgif*AdditionalFonts:           \n\
+        lucidabright-medium-r-normal,iso8859-1,ZapfChancery-MediumItalic\n\
+        lucidabright-demibold-r-normal,iso8859-1,ZapfChancery-MediumItalic\n\
+        lucidabright-medium-i-normal,iso8859-1,ZapfChancery-MediumItalic\n\
+        lucidabright-demibold-i-normal,iso8859-1,ZapfChancery-MediumItalic
+Tgif*FontSizes:         8 9 10 11 12 14 17 18 20 24 25 34 40 50 60 64 75 80 90 100 125 150 175 200 300 400 500
+
+
+
+gnuplot*line1Width:  0
+gnuplot*line2Width:  1
+gnuplot*line3Width:  2
+gnuplot*line4Width:  3
+gnuplot*line5Width:  4
+gnuplot*line6Width:  5
+
