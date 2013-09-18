@@ -1,12 +1,18 @@
 
 ;; --- General Settings -------------------------------------------------------
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  )
+
 (line-number-mode 't)
 (column-number-mode 't)               ;;; Sometimes handy
 (setq make-backup-files nil)
 
 (set-face-attribute 'default nil :family "Inconsolata")
 (set-face-attribute 'default nil :height 125)
-(load-theme 'tango-dark t)
+(load-theme 'solarized-dark t)
 
 (tool-bar-mode -1)
 
