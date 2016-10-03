@@ -52,3 +52,11 @@ Function prompt
 	Write-Host $lead -nonewline
 	return " "
 }
+
+Set-PSReadlineOption -TokenKind Keyword -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
+Set-PSReadlineOption -TokenKind String -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
+Set-PSReadlineOption -TokenKind Command -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
+Set-PSReadlineOption -TokenKind Number -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
+Set-PSReadlineOption -TokenKind Parameter -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
+Set-PSReadlineOption -EditMode emacs
+
