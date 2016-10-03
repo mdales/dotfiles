@@ -58,5 +58,9 @@ Set-PSReadlineOption -TokenKind String -ForegroundColor $Host.UI.RawUI.Foregroun
 Set-PSReadlineOption -TokenKind Command -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
 Set-PSReadlineOption -TokenKind Number -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
 Set-PSReadlineOption -TokenKind Parameter -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
-Set-PSReadlineOption -EditMode emacs
 
+# Don't want to use emacs mode, as that nukes cut/copy/paste
+Set-PSReadlineKeyHandler -Chord "Ctrl+a" -Function BeginningOfLine
+Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function EndOfLine
+Set-PSReadlineKeyHandler -Chord "Ctrl+k" -Function RevertLine
+Set-PSReadlineKeyHandler -Chord "Ctrl+l" -Function ClearScreen
