@@ -53,6 +53,11 @@ Function prompt
 	return " "
 }
 
+function branches 
+{
+    git branch --sort=-committerdate | Select-Object -First 20
+}
+
 Set-PSReadlineOption -TokenKind Keyword -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
 Set-PSReadlineOption -TokenKind String -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
 Set-PSReadlineOption -TokenKind Command -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
@@ -62,5 +67,6 @@ Set-PSReadlineOption -TokenKind Parameter -ForegroundColor $Host.UI.RawUI.Foregr
 # Don't want to use emacs mode, as that nukes cut/copy/paste
 Set-PSReadlineKeyHandler -Chord "Ctrl+a" -Function BeginningOfLine
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function EndOfLine
-Set-PSReadlineKeyHandler -Chord "Ctrl+k" -Function RevertLine
+Set-PSReadlineKeyHandler -Chord "Ctrl+k" -Function ForwardDeleteLine
 Set-PSReadlineKeyHandler -Chord "Ctrl+l" -Function ClearScreen
+Set-PSReadlineKeyHandler -Chord "Ctrl+w" -Function BackwardKillWord
