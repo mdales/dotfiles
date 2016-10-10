@@ -1,3 +1,4 @@
+alias ls='ls -F'
 alias ll='ls -laF'
 alias md=mkdir
 alias rd=rmdir
