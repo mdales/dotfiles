@@ -1,5 +1,55 @@
+# from http://stackoverflow.com/questions/31083855/simulating-ls-in-powershell#31085072
+function Format-WideColMajor {
+    [CmdletBinding()]
+    param(
+        [Parameter(ValueFromPipeline)]
+        [AllowNull()]
+        [AllowEmptyString()]
+        [PSObject]
+        $InputObject,
+
+        [Parameter()]
+        $Property
+    )
+
+    begin {
+        $list = new-object System.Collections.Generic.List[PSObject]
+    }
+
+    process {
+        $list.Add($InputObject)
+    }
+
+    end {
+        if ($Property) {
+            $output = $list | Foreach {"$($_.$Property)"}
+        }
+        else {
+            $output = $list | Foreach {"$_"}
+        }
+
+        $conWidth = $Host.UI.RawUI.BufferSize.Width - 1
+        $maxLen = ($output | Measure-Object -Property Length -Maximum).Maximum
+
+        $colWidth = $maxLen + 1
+
+        $numCols = [Math]::Floor($conWidth / $colWidth)
+        $numRows = [Math]::Ceiling($output.Count / $numCols)
+
+        for ($i=0; $i -lt $numRows; $i++) {
+            $line = ""
+            for ($j = 0; $j -lt $numCols; $j++) {
+                $item = $output[$i + ($j * $numRows)]
+                $line += "$item$(' ' * ($colWidth - $item.Length))"
+            }
+            $line
+        }
+    }
+}
+
 New-Alias -Name grep -Description grep Select-String
 New-Alias -Name open -Description open Start-Process
+New-Alias -NAme less -Description less More
 
 Function touch
 {
@@ -16,6 +66,12 @@ Function touch
     {
         echo $null > $file
     }
+}
+
+Function fi
+{
+    $filter = $args[0]
+    Get-ChildItem -Recurse -Filter $filter
 }
 
 del alias:cd -Force
@@ -57,6 +113,35 @@ function branches
 {
     git branch --sort=-committerdate | Select-Object -First 20
 }
+
+function md5
+{
+    Get-FileHash -a md5 $args | foreach { $_.Hash.toLower() }
+}
+
+function sha1
+{
+    Get-FileHash -a sha1 $args | foreach { $_.Hash.toLower() }
+}
+
+function sha256
+{
+    Get-FileHash -a sha256 $args | foreach { $_.Hash.toLower() }
+}
+
+function fi
+{
+    Get-ChildItem -R -Fi $args[0] | foreach { $_.DirectoryName + "\" + $_.ToString() }
+}
+
+del alias:ls -Force
+function ls
+{
+    Param([switch]$l,[switch]$a)
+
+    Get-ChildItem $args | foreach { if ($l.IsPresent) { $_ } else {$_.ToString()} } | Format-WideColMajor
+}
+
 
 Set-PSReadlineOption -TokenKind Keyword -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
 Set-PSReadlineOption -TokenKind String -ForegroundColor $Host.UI.RawUI.ForegroundColor -BackgroundColor $Host.UI.RawUI.BackgroundColor
