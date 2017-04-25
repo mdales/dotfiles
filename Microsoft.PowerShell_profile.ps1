@@ -134,6 +134,11 @@ function fi
     Get-ChildItem -R -Fi $args[0] | foreach { $_.DirectoryName + "\" + $_.ToString() }
 }
 
+function which
+{
+    Get-Command $args[0] | foreach { if ($_.CommandType -eq "Application") { $_.Source } elseif ($_.CommandType -eq "Alias") { $_.DisplayName } else { $_.CommandType } }
+}
+
 del alias:ls -Force
 function ls
 {
