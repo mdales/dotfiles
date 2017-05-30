@@ -136,7 +136,7 @@ function fi
 
 function which
 {
-    Get-Command $args[0] | foreach { if ($_.CommandType -eq "Application") { $_.Source } elseif ($_.CommandType -eq "Alias") { $_.DisplayName } else { $_.CommandType } }
+    Get-Command -all $args[0] | foreach { if ($_.CommandType -eq "Application") { $_.Source } elseif ($_.CommandType -eq "Alias") { $_.DisplayName } else { $_.CommandType } }
 }
 
 del alias:ls -Force
