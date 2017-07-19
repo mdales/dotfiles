@@ -21,12 +21,7 @@ function Format-WideColMajor {
     }
 
     end {
-        if ($Property) {
-            $output = $list | Foreach {"$($_.$Property)"}
-        }
-        else {
-            $output = $list | Foreach {"$_"}
-        }
+        $output = $list
 
         $conWidth = $Host.UI.RawUI.BufferSize.Width - 1
         $maxLen = ($output | Measure-Object -Property Length -Maximum).Maximum
