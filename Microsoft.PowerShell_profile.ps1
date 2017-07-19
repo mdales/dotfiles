@@ -49,7 +49,10 @@ function Format-WideColMajor {
 
 New-Alias -Name grep -Description grep Select-String
 New-Alias -Name open -Description open Start-Process
-New-Alias -NAme less -Description less More
+New-Alias -Name less -Description less More
+New-Alias -Name pbcopy -Description pbcopy Set-Clipboard
+New-Alias -name pbpaste -Description pbpaste Get-Clipboard
+
 
 Function touch
 {
