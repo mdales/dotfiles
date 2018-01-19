@@ -19,7 +19,7 @@ source ~/library/dot-files/aliases
 hosts = ()
 
 autoload -U compinit
-compinit -C
+# compinit -C
 zstyle ":completion:*" hosts $hosts
 
 rgrep()
@@ -32,3 +32,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # OPAM configuration
 . /Users/michael/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+
+eval "$(direnv hook zsh)"
