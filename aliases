@@ -12,3 +12,5 @@ alias mf='make force'
 alias mb='make bibtex'
 
 alias branches='git branch --sort=-committerdate | head -20'
+
+alias open='gio open'

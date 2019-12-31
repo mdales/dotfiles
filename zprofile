@@ -29,4 +29,5 @@ if [ -x /usr/bin/less ]; then
   export PAGER=less
 fi
 
-
+# swift
+export PATH=/opt/swift-5.1.1-RELEASE-ubuntu18.04/usr/bin:$PATH

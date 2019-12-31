@@ -14,7 +14,7 @@ setopt pushdsilent
 setopt nobgnice
 
 # load my aliases
-source ~/library/dot-files/aliases
+source ~/Library/dotfiles/aliases
 
 hosts = ()
 
