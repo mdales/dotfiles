@@ -1,7 +1,6 @@
-set -x PATH /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin
+set -x PATH /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin /usr/local/go/bin $HOME/go/bin
 
-set -x PATH $PATH /usr/local/heroku/bin
-set -x PATH $PATH /opt/swift-5.1.1-RELEASE-ubuntu18.04/usr/bin
+set -x EDITOR vi
 
 function fish_prompt
     set -l git_branch (git branch 2>/dev/null | sed -n '/\* /s///p')
@@ -25,4 +24,12 @@ end
 
 function branches
     git branch --sort=-committerdate | head -20
+end
+
+function ls --description 'List contents of directory'
+    set -l param --color=no
+    if isatty 1
+        set param $param --indicator-style=classify
+    end
+    command ls $param $argv
 end
